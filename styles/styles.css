@@ -135,9 +135,14 @@ body {
 
 .advantages {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 1200px;
   margin: 0 auto;
+}
+
+.advantages-item {
+  width: 400px;
 }
 
 .advantages-div {
@@ -219,13 +224,6 @@ body {
 .services-item-housing {
   background-color: rgba(131, 179, 211, 0.12);
   color: #333333;
-}
-
-.advanteges-list-buttom {
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  padding: 0;
 }
 
 .advantages-item-road {
@@ -492,6 +490,18 @@ body {
   color: #333333;
 }
 
+.hotel-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.hotel-card {
+  width: 340px;
+}
+
 .hotel-card-title {
   font-size: 24px;
   line-height: 28px;
@@ -527,6 +537,26 @@ body {
   text-transform: uppercase;
 }
 
+.pagination {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-item {
+  width: 55px;
+  height: 55px;
+}
+
+.pagination-amount {
+  display: flex;
+  flex-direction: row;
+  margin: 0 71 0 73;
+  padding: 0;
+  justify-content: space-between;
+}
+
 .pagination-link {
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
@@ -549,4 +579,13 @@ body {
   line-height: 21px;
   font-weight: 400;
   color: #333333;
+}
+
+.amount-hotel-item {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 386px;
+  justify-content: flex-end;
+
 }
