@@ -31,9 +31,14 @@ body {
 }
 
 .visually-hidden {
-  visibility: hidden;
-  margin: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
   padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .page-header {
@@ -53,12 +58,18 @@ body {
 }
 
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
   width: 430px;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .navigation-user {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   max-width: 300px;
   margin: 0;
   padding: 0;
@@ -66,8 +77,10 @@ body {
 }
 
 .navigation-link {
+  display:block;
+  padding: 20px 17px;
   font-family: "PT Sans", sans-serif;
-  font-size: 20;
+  font-size: 20px;
   line-height: 26px;
   font-weight: 700;
   text-align: center;
@@ -75,6 +88,11 @@ body {
   background-color: #ffffff;
   text-decoration: none;
   margin: 0 auto;
+}
+
+.navigation-user .navigation-link {
+  min-width: 16px;
+  min-height: 22px;
 }
 
 .main-container {
