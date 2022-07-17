@@ -605,6 +605,7 @@ color: rgba(255, 255, 255, 0.3);
   border: 0;
   border-radius: 10px 0 0 10px;
   background-color: #F2F2F2;
+  outline: none;
 }
 
 .field:hover {
@@ -918,9 +919,9 @@ color: rgba(255, 255, 255, 0.3);
 }
 
 .catalog-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 48px 48px 48px;
+  gap: 8px;
   margin-left: 76px;
   max-width: 170px;
 
@@ -993,7 +994,7 @@ color: rgba(255, 255, 255, 0.3);
   background-size: 18px;
 }
 
-.control-input+label::before:hover {
+.control-input+label:hover::before {
   background: rgba(255, 255, 255, 0.6);
 }
 .control-input:focus + label::before {
@@ -1004,7 +1005,7 @@ color: rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.3);
 }
 
-.control-input:checked+label::before:hover {
+.control-input:checked+label:hover::before {
   background: rgba(255, 255, 255, 0.6);
   background-image: url("../images/checkbox.svg");
 }
@@ -1051,7 +1052,7 @@ color: rgba(255, 255, 255, 0.3);
   background-image: url("../images/radio.svg");
   background-size: 18px;
 }
-.control-input-radio+label::before:hover {
+.control-input-radio+label:hover::before {
   background: rgba(255, 255, 255, 0.6);
 }
 .control-input-radio:focus + label::before {
@@ -1062,7 +1063,7 @@ color: rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.3);
 }
 
-.control-input-radio:checked+label::before:hover {
+.control-input-radio:checked+label:hover::before {
   background: rgba(255, 255, 255, 0.6);
   background-image: url("../images/radio.svg");
 
@@ -1262,11 +1263,6 @@ color: rgba(255, 255, 255, 0.3);
   right: -10px;
 }
 
-.select-control{
-  border: 2px solid #E5E5E5;
-  border-radius: 4px;
-  padding-left: 13px;
-}
 
 .reset-button {
   font-family: "PT Sans", sans-serif;
@@ -1307,6 +1303,7 @@ color: rgba(255, 255, 255, 0.3);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
   padding-top: 54px;
   padding-bottom: 57px;
 }
@@ -1328,7 +1325,6 @@ color: rgba(255, 255, 255, 0.3);
   height: 48px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-  margin-right: 8px;
   position: relative;
 }
 
@@ -1352,6 +1348,11 @@ color: rgba(255, 255, 255, 0.3);
   color: #333333;
   width: 290px;
   margin-left: 191px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  padding-left: 13px;
+  min-height: 50px;
+
 }
 
 .hotel-list {
